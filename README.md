@@ -15,7 +15,6 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
 
 [Plant List Page](https://tk-assets.lambdaschool.com/88008802-846c-46bb-8cf8-11ace219e2bf_ScreenShot2020-04-30at12.39.22PM.png)
-
 [Successful Form Submission](https://tk-assets.lambdaschool.com/90ebefd4-ee0f-4b1c-884c-1336ce87441d_ScreenShot2020-04-30at12.40.56PM.png)
 
 You will also need to build the two tests in the `CheckoutForm.test.js` file and make sure they are testing what the test title says they are.
