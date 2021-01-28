@@ -2,7 +2,7 @@
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored some advanced React topics ⚛️. During this sprint, you studied class components, the component lifecycle and class component lifecycle methods, custom hooks, and React Testing Library 🐙. In your challenge this week, you will demonstrate your mastery of these skills by creating an app that will fetch data from a local server using a class component, displaying that data, using a custom hook, and writing tests for your app.
+This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored some advanced React topics ⚛️. During this sprint, you studied **class components**, **the component lifecycle** and **class component lifecycle methods,** **custom hooks**, and **React Testing Library 🐙.** In your challenge this week, you will demonstrate your mastery of these skills by creating an app that will fetch data from a local server using a class component, displaying that data, using a custom hook, and writing tests for your app.
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
@@ -15,6 +15,7 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 In meeting the minimum viable product (MVP) specifications listed below, your project should look like the solution examples below:
 
 [Plant List Page](https://tk-assets.lambdaschool.com/88008802-846c-46bb-8cf8-11ace219e2bf_ScreenShot2020-04-30at12.39.22PM.png)
+
 [Successful Form Submission](https://tk-assets.lambdaschool.com/90ebefd4-ee0f-4b1c-884c-1336ce87441d_ScreenShot2020-04-30at12.40.56PM.png)
 
 You will also need to build the two tests in the `CheckoutForm.test.js` file and make sure they are testing what the test title says they are.
@@ -23,25 +24,15 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 
 Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead as the evaluate your solution.
 
-## Interview Questions
-
-Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
-
-1. Explain how to build stateful class components.
-
-2. Describe the different phases of the component lifecycle.
-
-3. Demonstrate an understanding of class component lifecycle methods.
-
-4. Define stateful logic.
-
-5. Describe how to test a React component with React Testing Library.
-
-You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
-
 ## Instructions
 
 ### Task 1: Project Set Up
+
+_This project uses a local server for the data fetching. You will need three seperate terminal windows open:_
+
+1. _one for your server_
+2. _one for your React app (in the /client folder)_
+3. _and one to run your tests_
 
 _Please follow the setup instructions closely so that you can get everything up and running smoothly_
 
@@ -57,15 +48,22 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 Go [here](./CodeGrade-webhook.md) to setup the CodeGrade webhook before you begin.
 
+**Starting the server**
+
+- [ ] Run `npm install` to download dependencies for the server.
+- [ ] Run the server using `npm start`.
+- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+
 **Starting the React app**
 
-- [ ] In a separate terminal run `npm install` to download dependencies.
-- [ ] Run `npm run start` to run the client application.
+- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [ ] Still inside the `client` folder run `npm run start` to run the client application.
 - [ ] Your browser should open up the project as normal
 
 **Starting your test runner**
 
-- [ ] Start the test runner with `npm test`
+- [ ] In the final terminal window, make sure you are in the `client` folder still
+- [ ] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
 
 **Commit and Push OFTEN!**
 
@@ -124,4 +122,48 @@ test("displays plants in cart", () => {
 
 ## Submission format
 
-To submit, simply push your latest commit to the master branch and the CodeGrade webhook you setup will run automatically.
+Follow these steps for completing your project.
+
+- [ ] Ensure that your projects are complete on your <firstName-lastName> branch.
+- [ ] Merge your <firstName-lastName> branch into your main branch.
+- [ ] Push your main branch to github and check that it is registers within codegrade.
+- [ ] Check your personal feedback the following Monday. For more information check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-Student-facing-c5147cee220c4044a25de28bcb6bb54a)
+
+
+## Solution Guide
+### MVP:
+#### Add plant api response to state:
+1. Open PlantList component.
+2. Add state to class component.
+3. Add componentDidMount to class component.
+4. Add in axios call to http://localhost:3333/plants
+
+#### Add useForm custom hook to checkout.
+1. Open Checkout component.
+2. Create custom hook for useForm function.
+3. Move all stateful logic to useForm hook.
+4. Return all needed stateful logic.
+5. Capture all needed stateful logic within component.
+6. Modularize the hook.
+
+####	Testing the Checkout Form:
+1. Add test for header existence.
+2. Add in test for happy path of checkout form.
+
+### Stretch:
+#### Add filter option to change list:
+1. Open PlantList Component.
+2. Add filter input to screen.
+3. Add filterText to state.
+4. Add handleFilterChange event handler to PlantList component.
+5. Set new state of filterText based on target.value.
+6. Create new displayPlant variable that filters the plant states value items whose name includes the filterText state.
+
+#### Add a dark mode custom hook
+1. Open App.js
+2. Add useDarkMode hook function.
+3. Add state for dark mode.
+4. Add return values for getting and toggling dark mode.
+5. Add basic css for light mode.
+6. Connect class substitution to hook.
+7. Modularize hook.
