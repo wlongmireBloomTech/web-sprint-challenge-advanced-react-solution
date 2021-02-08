@@ -28,13 +28,26 @@ You will also need to build the two tests in the `CheckoutForm.test.js` file and
 
 ### Task 1: Project Setup
 
+#### Project Cloning
 * [ ] Fork and clone this repository.
 * [ ] Create a new working branch: git checkout -b `<firstName-lastName>`.
 * [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 * [ ] Push commits: git push origin `<firstName-lastName>`.
-* [ ] **RUN** `npm install` to install your dependencies.
-* [ ] **RUN** `npm start` to start your application.
-* [ ] Open a seperate terminal window to display your tests. **Start** the test runner with `npm test.* [ ] **While you will be using an external server, you will not need to run it internally for this project. Server code will run automatically in the background of your client code. To test, make axios call within the client code itself.**
+
+#### Server Code Setup
+* [ ] Run `npm install` to download dependencies for the server.
+* [ ] Run the server using `npm start`.
+*[ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+
+#### Client Code Setup
+- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [ ] Still inside the `client` folder run `npm run start` to run the client application.
+- [ ] Your browser should open up the project as normal
+
+#### Test Runner Setup
+- [ ] In the final terminal window, make sure you are in the `client` folder still
+- [ ] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
+
 
 ### Task 2: CodeGrade Setup
 
