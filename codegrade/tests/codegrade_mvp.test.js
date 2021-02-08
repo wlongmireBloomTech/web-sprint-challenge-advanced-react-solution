@@ -8,53 +8,53 @@ test("renders without errors", ()=>{
   render(<CheckoutForm />);
 });
 
-// describe("Checkout Form tests", ()=>{
-//   test("form submits correctly", async () => {
-//     render(<CheckoutForm />);
+describe("Checkout Form tests", ()=>{
+  test("form submits correctly", async () => {
+    render(<CheckoutForm />);
   
-//     fireEvent.change(screen.getByLabelText(/first name:/i), {
-//       target: { value: "test value first name" },
-//     });
-//     fireEvent.change(screen.getByLabelText(/last name/i), {
-//       target: { value: "test value last name" },
-//     });
-//     fireEvent.change(screen.getByLabelText(/address/i), {
-//       target: { value: "test value address" },
-//     });
-//     fireEvent.change(screen.getByLabelText(/city/i), {
-//       target: { value: "test value city" },
-//     });
-//     fireEvent.change(screen.getByLabelText(/state/i), {
-//       target: { value: "test value state" },
-//     });
-//     fireEvent.change(screen.getByLabelText(/zip/i), {
-//       target: { value: "test value zip" },
-//     });
+    fireEvent.change(screen.getByLabelText(/first name:/i), {
+      target: { value: "test value first name" },
+    });
+    fireEvent.change(screen.getByLabelText(/last name/i), {
+      target: { value: "test value last name" },
+    });
+    fireEvent.change(screen.getByLabelText(/address/i), {
+      target: { value: "test value address" },
+    });
+    fireEvent.change(screen.getByLabelText(/city/i), {
+      target: { value: "test value city" },
+    });
+    fireEvent.change(screen.getByLabelText(/state/i), {
+      target: { value: "test value state" },
+    });
+    fireEvent.change(screen.getByLabelText(/zip/i), {
+      target: { value: "test value zip" },
+    });
   
-//     fireEvent.click(screen.getByRole("button", { name: /checkout/i }));
+    fireEvent.click(screen.getByRole("button", { name: /checkout/i }));
   
-//     expect(screen.getByTestId("successMessage")).toBeInTheDocument();
-//   });
+    expect(screen.getByTestId("successMessage")).toBeInTheDocument();
+  });
   
-//   test("Fetches the list of plants", async () => {
-//     render(<PlantList addToCart={jest.fn()} />);
+  test("Fetches the list of plants", async () => {
+    render(<PlantList addToCart={jest.fn()} />);
   
-//     await waitFor(() => screen.getAllByTestId("plant-card"));
+    await waitFor(() => screen.getAllByTestId("plant-card"));
   
-//     expect(screen.getAllByTestId("plant-card")).toHaveLength(8);
-//   });
-// });
+    expect(screen.getAllByTestId("plant-card")).toHaveLength(8);
+  });
+});
 
-// describe("Plant List tests", ()=>{
-//   test("Calls addToCart function when add button is clicked", async () => {
-//     const addToCart = jest.fn();
-//     render(<PlantList addToCart={addToCart} />);
+describe("Plant List tests", ()=>{
+  test("Calls addToCart function when add button is clicked", async () => {
+    const addToCart = jest.fn();
+    render(<PlantList addToCart={addToCart} />);
   
-//     await waitFor(() => screen.getAllByTestId("plant-card"));
+    await waitFor(() => screen.getAllByTestId("plant-card"));
   
-//     fireEvent.click(screen.getAllByRole("button", { name: /Add to cart/i })[0]);
+    fireEvent.click(screen.getAllByRole("button", { name: /Add to cart/i })[0]);
   
-//     expect(addToCart).toHaveBeenCalled();
-//   });
+    expect(addToCart).toHaveBeenCalled();
+  });
     
-// });
+});
