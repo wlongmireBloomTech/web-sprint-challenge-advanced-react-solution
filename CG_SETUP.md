@@ -26,15 +26,34 @@ cg-react-scripts install
 npm i && setup.bash
 ```
 
-### Programs to test
+## Rubics
+### Client MVP Rubic
+> **Category Name:** Client MVP
+> **Category Description:** Base tests for project client code.
+> **Max Points:** 10
 
-#### Checking student code to grade compliance with project specifications
+### Test MVP Rubic
+> **Category Name:** Test MVP
+> **Category Description:** Minimum testing needed to pass.
+> **Max Points:** 10
 
-**Category Rubric:** Student Implementation MVP
-**Category Step:** Unit Test
-**Category Name:** Student Implementation MVP
-**Weight:** 1
-**Program To test:**
-```bash
-cg-react-scripts run src/codegrade/codegrade_mvp.test.js
-```
+## AutoGrade Levels
+### Client MVP Level
+> **Category Rubric:** Client MVP
+> **Category Step:** Unit Test
+> **Category Name:** Student Implementation MVP
+> **Weight:** 1
+> **Program To test:**
+> ```bash
+> cg-react-scripts run src/codegrade/codegrade_mvp.test.js
+> ```
+
+### Test MVP Level
+> **Category Rubric:** Test MVP
+> **Category Step:** Unit Test
+> **Category Name:** Student Test MVP
+> **Weight:** 1
+> **Program To test:**
+> ```bash
+> cg-react-scripts run src/components/CheckoutForm.test.js
+> ```
