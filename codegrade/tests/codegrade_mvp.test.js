@@ -1,14 +1,15 @@
 import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import MutationObserver from 'mutationobserver-shim';
 
 import CheckoutForm from "../components/CheckoutForm";
 import PlantList from "./../components/PlantList";
 
-test("renders without errors", ()=>{
-  render(<CheckoutForm />);
-});
-
 describe("Checkout Form tests", ()=>{
+  test("renders without errors", ()=>{
+    render(<CheckoutForm />);
+  });
+
   test("form submits correctly", async () => {
     render(<CheckoutForm />);
   
@@ -46,6 +47,10 @@ describe("Checkout Form tests", ()=>{
 });
 
 describe("Plant List tests", ()=>{
+  test("renders without errors", ()=>{
+    render(<PlantList />);
+  });
+
   test("Calls addToCart function when add button is clicked", async () => {
     const addToCart = jest.fn();
     render(<PlantList addToCart={addToCart} />);
