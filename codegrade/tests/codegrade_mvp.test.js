@@ -2,8 +2,8 @@ import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import MutationObserver from 'mutationobserver-shim';
 
-import CheckoutForm from "./components/CheckoutForm";
-import PlantList from "./components/PlantList";
+import CheckoutForm from "./../components/CheckoutForm";
+import PlantList from "./../components/PlantList";
 
 describe("Checkout Form tests", ()=>{
   test("renders without errors", ()=>{
