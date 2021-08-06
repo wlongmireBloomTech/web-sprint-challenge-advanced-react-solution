@@ -12,7 +12,7 @@ test("renders without errors", () => {
     expect(header).toBeInTheDocument();
 });
 
-test("form shows success message on submit with form details", async () => {
+test("shows success message on submit with form details", async () => {
     render(<CheckoutForm/>);
     const firstName = screen.getByLabelText(/First Name:/i);
     const lastName = screen.getByLabelText(/Last Name:/i);
